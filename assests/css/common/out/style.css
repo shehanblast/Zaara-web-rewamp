@@ -1,0 +1,89 @@
+#top-img3 {
+  background: url('../../../images/out/sing/sm2.jpg');
+}
+#top-img4 {
+  background: url('../../../images/out/viet/v8.jpg');
+}
+#top-img5 {
+  background: url('../../../images/out/mal/m7.jpg');
+}
+#top-img6 {
+  background: url('../../../images/out/thai/t5.jpg');
+}
+
+#top-img7 {
+  background: url('../../../images/bcars/bc.jpg');
+}
+
+#top-img8 {
+  background: url('../../../images/zaara-agro/za.jpg');
+}
+
+#section2 h1 {
+  margin-top: 55px;
+  font-size: 25px;
+}
+#section2 p {
+  margin-top: 45px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.o1 {
+  padding: 70px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+#section3 h1 {
+  font-size: 25px;
+}
+
+.aa {
+  padding: 70px;
+}
+.ab {
+  padding: 20px;
+}
+.ab1 {
+  padding: 30px;
+}
+.ac {
+  padding: 45px;
+}
+.ad {
+  padding: 45px;
+}
+.ad1 {
+  padding: 3px;
+}
+.ad2 {
+  padding: 70px;
+  font-size: 17px;
+}
+.ad span {
+  font-size: 18px;
+}
+.ad3 {
+  padding: 25px;
+}
+
+.btn-back-to-top {
+  color: #64b5f6;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+#nav1 > ol li:active {
+  background: #005cbf;
+}

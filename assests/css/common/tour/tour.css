@@ -1,0 +1,70 @@
+/*+--------------------------------------+*/
+/*+                                      +*/
+/*+                tour                  +*/
+/*+                                      +*/
+/*+--------------------------------------+*/
+
+/*-----------------------------------------------tour-sec1------------------------------------------------------------*/
+#top-img3{
+    background: url("../../../images/tour/tour-sl.jpg");
+}
+
+#top-img4{
+    background: url("../../../images/tour/traveler.jpg");
+}
+
+#top-img5{
+    background: url("../../../images/tour/cycle.jpg");
+}
+
+#top-img6{
+    background: url("../../../images/tour/student.jpg");
+}
+
+#top-img7{
+    background: url("../../../images/tour/budda.jpg");
+}
+
+#top-img8{
+    background: url("../../../images/tour/eventlight.jpg");
+}
+.a{
+  padding: 18px;
+}
+.b{
+  padding: 15px;
+}
+.ac{
+  padding: 32px;
+}
+
+h1,h2,h3,h4{
+  font-weight: 400;
+}
+h5{
+  font-weight: 100;
+}
+.btn-back-to-top{
+  color:#64b5f6;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+
+#nav1>ol li:active{
+    background: #005cbf;
+}
+
+.ll{
+  padding: 100px;
+}
+.aa{
+  padding: 14px;
+}
+.aab{
+  padding: 3px;
+}

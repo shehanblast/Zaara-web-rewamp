@@ -1,0 +1,56 @@
+/*+--------------------------------------+*/
+/*+                                      +*/
+/*+             sri Lanka                +*/
+/*+                                      +*/
+/*+--------------------------------------+*/
+
+/*-----------------------------------------------a-s-1----------------------------------------------------------------*/
+#top-img2 {
+  background: url('../../../images/srilanka/sl-bg2.jpg');
+}
+
+#more8,
+#more9 {
+  display: none;
+}
+#about-story-img {
+  width: 80%;
+  clip-path: circle(50% at 50% 50%);
+  margin-top: 12%;
+  margin-bottom: auto;
+  width: 80%;
+  clip-path: circle(50% at 50% 50%);
+  margin-top: 12%;
+  margin-bottom: auto;
+}
+
+#history-img1 {
+  background: url('../../../../assests/images/srilanka/1.jpg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+}
+
+@media all and (max-width: 768px) {
+  .a-title {
+    margin-top: 40%;
+  }
+}
+
+.btn-back-to-top {
+  color: #64b5f6;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-size: 22px;
+}
+#sec3 {
+  font-size: 15px;
+}
+#sec3 span {
+  font-size: 18px;
+}
