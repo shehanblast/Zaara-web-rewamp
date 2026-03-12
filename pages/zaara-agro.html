@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zaara Agro – Zaara Tours International</title>
+  <link rel="shortcut icon" href="../assests/images/logo/Zaara Logoxwhite.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Poiret One', 'cursive'],
+            body: ['Ubuntu', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Ubuntu', sans-serif; overflow-x: hidden; }
+
+    /* Nav */
+    #main-nav { transition: background 0.3s, box-shadow 0.3s; }
+    #main-nav.scrolled { background: rgba(3,7,18,0.97) !important; box-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+
+    /* Desktop dropdown */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 0;
+      background: rgba(3,7,18,0.97); min-width: 200px; z-index: 200;
+      border-top: 2px solid #2563eb;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 10px 18px; color: #d1d5db; font-size: 13px; white-space: nowrap; }
+    .nav-dropdown-menu a:hover { background: #2563eb; color: white; }
+
+    /* Nested dropdown */
+    .nav-nested { position: relative; }
+    .nav-nested-menu {
+      display: none; position: absolute; top: 0; left: 100%;
+      background: rgba(3,7,18,0.97); min-width: 200px; z-index: 201;
+      border-top: 2px solid #2563eb;
+    }
+    .nav-nested:hover .nav-nested-menu { display: block; }
+    .nav-nested-menu a { display: block; padding: 10px 18px; color: #d1d5db; font-size: 13px; }
+    .nav-nested-menu a:hover { background: #2563eb; color: white; }
+
+    /* Mobile menu */
+    #mobile-menu { transform: translateX(-100%); transition: transform 0.3s ease; }
+    #mobile-menu.open { transform: translateX(0); }
+    #menu-overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    #menu-overlay.open { opacity: 1; pointer-events: auto; }
+    .mobile-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .mobile-accordion-content.open { max-height: 600px; }
+
+    /* Hero */
+    .hero-bg {
+      background-image: url('../assests/images/zaara-agro/za.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Scroll reveals */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right { opacity: 0; transform: translateX(50px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+
+    /* Back to top */
+    #back-to-top { opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    #back-to-top.visible { opacity: 1; pointer-events: auto; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-950/90 to-gray-900/85 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="../index.html">
+        <img src="../assests/images/logo/Zaara Logoxwhite.png" alt="Zaara Tours" class="h-10 w-auto" />
+      </a>
+
+      <!-- Desktop nav -->
+      <ol class="hidden lg:flex items-center gap-1 list-none m-0 p-0">
+        <li><a href="../index.html" class="text-gray-200 hover:text-blue-400 px-3 py-2 text-sm transition-colors">Home</a></li>
+
+        <li class="nav-dropdown">
+          <button class="text-gray-200 hover:text-blue-400 px-3 py-2 text-sm transition-colors flex items-center gap-1">
+            About <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="about.html">Our Story</a>
+            <a href="about.html#chairman">Chairman Message</a>
+          </div>
+        </li>
+
+        <li class="nav-dropdown">
+          <button class="text-gray-200 hover:text-blue-400 px-3 py-2 text-sm transition-colors flex items-center gap-1">
+            Tours <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-nested">
+              <a href="#" class="flex items-center justify-between">Visit Sri Lanka <svg class="w-3 h-3 ml-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg></a>
+              <div class="nav-nested-menu">
+                <a href="p1.html">5 Night 6 Days</a>
+                <a href="p2.html">7 Night 8 Days</a>
+                <a href="p3.html">9 Night 10 Days</a>
+                <a href="p4.html">10 Night 11 Days</a>
+                <a href="t-3-sport.html">Sport Tours</a>
+                <a href="t-4-education.html">Education Tours</a>
+                <a href="t-5-vandana.html">Vandana Tours</a>
+              </div>
+            </div>
+            <div class="nav-nested">
+              <a href="#" class="flex items-center justify-between">Visit Global <svg class="w-3 h-3 ml-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg></a>
+              <div class="nav-nested-menu">
+                <a href="#">Singapore Tour</a>
+                <a href="out2.html">Vietnam Tour</a>
+                <a href="out3.html">Malaysia Tour</a>
+                <a href="out4.html">Thailand Tour</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="srilanka.html" class="text-gray-200 hover:text-blue-400 px-3 py-2 text-sm transition-colors">Sri Lanka</a></li>
+        <li><a href="bridal-cars.html" class="text-gray-200 hover:text-blue-400 px-3 py-2 text-sm transition-colors">Bridal Cars</a></li>
+        <li><a href="zaara-agro.html" class="text-blue-400 border-b border-blue-400 px-3 py-2 text-sm">Zaara Agro</a></li>
+        <li><a href="t-6-event.html" class="text-gray-200 hover:text-blue-400 px-3 py-2 text-sm transition-colors">Event Media</a></li>
+        <li><a href="../index.html#contact" class="text-gray-200 hover:text-blue-400 px-3 py-2 text-sm transition-colors">Contact</a></li>
+      </ol>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-30 lg:hidden"></div>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-menu" class="fixed top-0 left-0 h-full w-72 bg-gray-950 z-40 lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between p-4 border-b border-gray-800">
+      <img src="../assests/images/logo/Zaara Logoxwhite.png" alt="Zaara Tours" class="h-8 w-auto" />
+      <button id="menu-close" class="text-gray-400 hover:text-white p-1">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="p-4">
+      <ul class="space-y-1 list-none p-0 m-0">
+        <li><a href="../index.html" class="block py-2 px-3 text-gray-200 hover:text-blue-400 hover:bg-gray-900 rounded transition-colors">Home</a></li>
+
+        <li>
+          <button class="mobile-accordion w-full text-left py-2 px-3 text-gray-200 hover:text-blue-400 hover:bg-gray-900 rounded transition-colors flex justify-between items-center">
+            About <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+          </button>
+          <div class="mobile-accordion-content pl-4">
+            <a href="about.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Our Story</a>
+            <a href="about.html#chairman" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Chairman Message</a>
+          </div>
+        </li>
+
+        <li>
+          <button class="mobile-accordion w-full text-left py-2 px-3 text-gray-200 hover:text-blue-400 hover:bg-gray-900 rounded transition-colors flex justify-between items-center">
+            Tours <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+          </button>
+          <div class="mobile-accordion-content pl-4">
+            <p class="py-1 px-3 text-gray-500 text-xs uppercase tracking-wider">Visit Sri Lanka</p>
+            <a href="p1.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">5 Night 6 Days</a>
+            <a href="p2.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">7 Night 8 Days</a>
+            <a href="p3.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">9 Night 10 Days</a>
+            <a href="p4.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">10 Night 11 Days</a>
+            <a href="t-3-sport.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Sport Tours</a>
+            <a href="t-4-education.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Education Tours</a>
+            <a href="t-5-vandana.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Vandana Tours</a>
+            <p class="py-1 px-3 text-gray-500 text-xs uppercase tracking-wider mt-2">Visit Global</p>
+            <a href="#" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Singapore Tour</a>
+            <a href="out2.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Vietnam Tour</a>
+            <a href="out3.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Malaysia Tour</a>
+            <a href="out4.html" class="block py-2 px-3 text-gray-400 hover:text-blue-400 text-sm">Thailand Tour</a>
+          </div>
+        </li>
+
+        <li><a href="srilanka.html" class="block py-2 px-3 text-gray-200 hover:text-blue-400 hover:bg-gray-900 rounded transition-colors">Sri Lanka</a></li>
+        <li><a href="bridal-cars.html" class="block py-2 px-3 text-gray-200 hover:text-blue-400 hover:bg-gray-900 rounded transition-colors">Bridal Cars</a></li>
+        <li><a href="zaara-agro.html" class="block py-2 px-3 text-blue-400 bg-gray-900 rounded">Zaara Agro</a></li>
+        <li><a href="t-6-event.html" class="block py-2 px-3 text-gray-200 hover:text-blue-400 hover:bg-gray-900 rounded transition-colors">Event Media</a></li>
+        <li><a href="../index.html#contact" class="block py-2 px-3 text-gray-200 hover:text-blue-400 hover:bg-gray-900 rounded transition-colors">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-bg relative flex items-center justify-center" style="height: 60vh; min-height: 340px;">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 text-center text-white px-4 reveal">
+      <h1 class="font-display text-5xl md:text-7xl font-bold tracking-wide drop-shadow-lg mb-4">
+        Zaara Agro
+      </h1>
+      <img src="../assests/images/zaara-agro/za-logo.png" alt="Zaara Agro Logo" class="mx-auto mt-4" style="width: 90px;" />
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="bg-gray-100 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 list-none p-0 m-0">
+        <li><a href="../index.html" class="hover:text-blue-600 transition-colors">Home</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li class="text-blue-600 font-medium">Zaara Agro</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- Description Section -->
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold uppercase tracking-widest px-4 py-1 rounded-full mb-4">Organic Agriculture</span>
+          <h2 class="font-display text-4xl md:text-5xl text-gray-900 mb-6">About Zaara Agro</h2>
+          <div class="w-16 h-1 bg-green-500 mx-auto mb-8 rounded"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="reveal-left">
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">
+              The organic industry is one of the fastest-growing agricultural segments in the world. Organic farming yields vital benefits such as preservation of soil's organic composition and environmental sustainability.
+            </p>
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">
+              Organic farmers, ranchers, and food processors use agricultural methods intended to preserve the environment. Zaara Agro strives to provide high-quality, healthy foods through sustainable organic agriculture.
+            </p>
+
+            <!-- Feature pills -->
+            <div class="flex flex-wrap gap-3 mt-6">
+              <span class="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-2 rounded-full">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                100% Organic
+              </span>
+              <span class="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-2 rounded-full">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Eco Friendly
+              </span>
+              <span class="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-2 rounded-full">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Sustainable Farming
+              </span>
+              <span class="inline-flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-2 rounded-full">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                High Quality Produce
+              </span>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img src="../assests/images/zaara-agro/za-logo.png" alt="Zaara Agro" class="w-full bg-green-50 p-12 object-contain" style="max-height: 360px;" />
+              <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-width Image Section -->
+    <section class="bg-gray-50 py-20 px-4">
+      <div class="max-w-5xl mx-auto reveal">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-3xl md:text-4xl text-gray-900 mb-4">Our Farm</h2>
+          <div class="w-12 h-1 bg-green-500 mx-auto rounded"></div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="../assests/images/zaara-agro/za-1.jpg" alt="Zaara Agro Farm" class="w-full object-cover" style="max-height: 560px;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <section class="bg-green-700 py-14 px-4">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <h2 class="font-display text-3xl md:text-4xl text-white mb-4">Interested in Zaara Agro?</h2>
+        <p class="text-green-100 text-lg mb-8">Get in touch with us to learn more about our organic produce and farming initiatives.</p>
+        <a href="../index.html#contact" class="inline-block bg-white text-green-700 font-semibold px-8 py-3 rounded-lg hover:bg-green-50 transition-colors shadow-lg">
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-950 text-gray-300 pt-12 pb-6 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-gray-800">
+
+        <!-- Logo + tagline -->
+        <div class="text-center md:text-left">
+          <img src="../assests/images/logo/Zaara Logoxwhite.png" alt="Zaara Tours International" class="h-16 w-auto mx-auto md:mx-0 mb-4" />
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Your trusted travel partner for Sri Lanka and beyond. Creating unforgettable journeys since 2010.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="text-center">
+          <h3 class="font-display text-white text-xl mb-5">Quick Links</h3>
+          <ul class="space-y-2 list-none p-0 m-0">
+            <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors text-sm">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About</a></li>
+            <li><a href="t-1-srilanka.html" class="text-gray-400 hover:text-white transition-colors text-sm">Visit Sri Lanka</a></li>
+            <li><a href="t-2-global.html" class="text-gray-400 hover:text-white transition-colors text-sm">Visit Global</a></li>
+            <li><a href="t-6-event.html" class="text-gray-400 hover:text-white transition-colors text-sm">Event Media</a></li>
+            <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="text-center md:text-right">
+          <h3 class="font-display text-white text-xl mb-5">Contact Details</h3>
+          <address class="not-italic text-gray-400 text-sm space-y-2">
+            <p>NO:282/E, UC Road, Waduramulla<br/>Panadura, Sri Lanka.</p>
+            <p>+(94) 702 612683<br/>+(94) 772 612683<br/>+(94) 382 248354</p>
+          </address>
+          <div class="flex justify-center md:justify-end gap-4 mt-5">
+            <a href="https://twitter.com/ToursZaara" target="_blank" rel="noopener" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Twitter">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/zaaratours/" target="_blank" rel="noopener" class="text-gray-400 hover:text-blue-500 transition-colors" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-red-500 transition-colors" aria-label="YouTube">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-6 text-center text-sm text-gray-500">
+        <p class="mb-1">Copyright 2020 © Zaara Tours International (PVT) Ltd. All Rights Reserved.</p>
+        <p>Concept designed and developed by
+          <span class="text-white font-semibold ml-1">Binuka Paranagama</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#" id="back-to-top" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-40" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+  </a>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('main-nav');
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 80);
+      backBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    function openMenu() { mobileMenu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+
+    menuBtn.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Mobile accordion
+    document.querySelectorAll('.mobile-accordion').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('svg');
+        const isOpen = content.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.mobile-accordion-content').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('.mobile-accordion svg').forEach(i => i.style.transform = '');
+        // Open clicked if was closed
+        if (!isOpen) {
+          content.classList.add('open');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObs.observe(el));
+  </script>
+
+</body>
+</html>
