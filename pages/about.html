@@ -59,8 +59,13 @@
     .nav-item:hover .nav-dropdown { display: block; }
     .nav-nested-item .nav-nested-dropdown { display: none; }
     .nav-nested-item:hover .nav-nested-dropdown { display: block; }
+    /* Bridge: invisible pseudo-element fills the gap so hover isn't lost */
+    .nav-dropdown::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
+    .nav-nested-dropdown::before { content: ''; position: absolute; top: 0; left: -8px; width: 8px; height: 100%; }
     #main-nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
     #main-nav.scrolled { background: rgba(10,14,20,0.97) !important; box-shadow: 0 2px 24px rgba(0,0,0,0.5); }
+    /* Solid nav when a dropdown is open */
+    #main-nav.nav-open { background: rgba(10,14,20,0.97) !important; box-shadow: 0 2px 24px rgba(0,0,0,0.5); }
 
     /* Mobile drawer */
     #mobile-menu { transform: translateX(-100%); transition: transform 0.3s ease; }
@@ -484,6 +489,12 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObs.observe(el));
+
+  // ── Dropdown hover → solid nav ───────────────────
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('mouseenter', () => nav.classList.add('nav-open'));
+    item.addEventListener('mouseleave', () => nav.classList.remove('nav-open'));
+  });
 
   // ── Smooth scroll ────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(a => {

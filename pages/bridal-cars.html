@@ -51,8 +51,13 @@
     .nav-item:hover .nav-dropdown { display: block; }
     .nav-nested-item .nav-nested-dropdown { display: none; }
     .nav-nested-item:hover .nav-nested-dropdown { display: block; }
+    /* Bridge: invisible pseudo-element fills the gap so hover isn't lost */
+    .nav-dropdown::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
+    .nav-nested-dropdown::before { content: ''; position: absolute; top: 0; left: -8px; width: 8px; height: 100%; }
     #main-nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
     #main-nav.scrolled { background: rgba(10,14,20,0.97) !important; box-shadow: 0 2px 24px rgba(0,0,0,0.5); }
+    /* Solid nav when a dropdown is open */
+    #main-nav.nav-open { background: rgba(10,14,20,0.97) !important; box-shadow: 0 2px 24px rgba(0,0,0,0.5); }
 
     /* Mobile drawer */
     #mobile-menu { transform: translateX(-100%); transition: transform 0.3s ease; }
@@ -283,22 +288,20 @@
       <span class="px-5 py-2 bg-blue-50 text-blue-700 border border-blue-200 rounded-full text-sm font-medium">Trusted Arrivals</span>
     </div>
 
-    <!-- Gallery row 1: 3 images -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+    <!-- Gallery: 2×2 grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-zoom-in reveal-left" onclick="openLightbox('../assests/images/bcars/bc3.jpg')">
-        <img src="../assests/images/bcars/bc3.jpg" alt="Bridal Car" class="w-full h-64 object-cover">
+        <img src="../assests/images/bcars/bc3.jpg" alt="Bridal Car" class="w-full h-72 object-cover">
       </div>
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-zoom-in reveal" onclick="openLightbox('../assests/images/bcars/bc1.jpg')">
-        <img src="../assests/images/bcars/bc1.jpg" alt="Bridal Car" class="w-full h-64 object-cover">
+      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-zoom-in reveal-right" onclick="openLightbox('../assests/images/bcars/bc1.jpg')">
+        <img src="../assests/images/bcars/bc1.jpg" alt="Bridal Car" class="w-full h-72 object-cover">
       </div>
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-zoom-in reveal-right" onclick="openLightbox('../assests/images/bcars/bc2.jpg')">
-        <img src="../assests/images/bcars/bc2.jpg" alt="Bridal Car" class="w-full h-64 object-cover">
+      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-zoom-in reveal-left" onclick="openLightbox('../assests/images/bcars/bc2.jpg')">
+        <img src="../assests/images/bcars/bc2.jpg" alt="Bridal Car" class="w-full h-72 object-cover">
       </div>
-    </div>
-
-    <!-- Gallery row 2: 1 wide image -->
-    <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-zoom-in max-w-xl reveal" onclick="openLightbox('../assests/images/bcars/bc4.jpg')">
-      <img src="../assests/images/bcars/bc4.jpg" alt="Bridal Car" class="w-full h-64 object-cover">
+      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-zoom-in reveal-right" onclick="openLightbox('../assests/images/bcars/bc4.jpg')">
+        <img src="../assests/images/bcars/bc4.jpg" alt="Bridal Car" class="w-full h-72 object-cover">
+      </div>
     </div>
 
   </div>
@@ -466,6 +469,12 @@
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // ── Dropdown hover → solid nav ───────────────────
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('mouseenter', () => nav.classList.add('nav-open'));
+    item.addEventListener('mouseleave', () => nav.classList.remove('nav-open'));
+  });
 
   // ── Smooth scroll ────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(a => {
