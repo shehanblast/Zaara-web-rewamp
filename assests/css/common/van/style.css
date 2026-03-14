@@ -1,0 +1,75 @@
+#top-img3 {
+  background: url('../../../images/vandana/dm.jpg');
+}
+#top-img4 {
+  background: url('../../../images/vandana/tm2.jpg');
+}
+
+#section2 h2 {
+  margin-top: 90px;
+  font-size: 40px;
+}
+#section2 p {
+  margin-top: 50px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.o1 {
+  padding: 75px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+#section3 h1 {
+  font-size: 25px;
+}
+
+.aa {
+  padding: 1px;
+}
+.ab {
+  padding: 40px;
+}
+.ab1 {
+  padding: 60px;
+}
+.ac {
+  padding: 90px;
+}
+.ad {
+  padding: 90px;
+}
+.ad1 {
+  padding: 50px;
+}
+.ad2 {
+  padding: 35px;
+  font-size: 17px;
+}
+.ad span {
+  font-size: 18px;
+}
+.ad3 {
+  padding: 50px;
+}
+
+.btn-back-to-top {
+  color: #64b5f6;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+#nav1 > ol li:active {
+  background: #005cbf;
+}

@@ -1,2430 +1,835 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ZTI - 10 NIGHTS 11 DAYS</title>
-
-    <!--
-         +--------------------------------------+
-         +                                      +
-         +              meta-data               +
-         +                                      +
-         +--------------------------------------+
-    -->
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <!--
-         +--------------------------------------+
-         +                                      +
-         +                css                   +
-         +                                      +
-         +--------------------------------------+
-    -->
-    <!---------bootstrap---------->
-    <link rel="stylesheet" href="../assests/css/bootstrap/bootstrap.min.css" />
-
-    <link
-      rel="shortcut icon"
-      href="../assests/images/logo/Zaara Logoxwhite.png"
-    />
-
-    <!--------animate.css--------->
-    <link rel="stylesheet" href="../assests/css/animatecss/animeta.css" />
-
-    <!--------google-font--------->
-    <!--forum-->
-    <!--font-family: 'Forum', cursive;-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Forum&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!--poiret one-->
-    <!--font-family: 'Forum', cursive;font-family: 'Poiret One', cursive;-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Forum|Poiret+One&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!--ubuntu-->
-    <!--font-family: 'Ubuntu', sans-serif;-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap"
-      rel="stylesheet"
-    />
-
-    <!--------common-css---------->
-    <link rel="stylesheet" href="../assests/css/common/common.css" />
-
-    <!--------packages-css---------->
-    <link rel="stylesheet" href="../assests\css\common\packages\style.css" />
-
-    <!--------owl---------->
-    <link rel="stylesheet" href="../assests/css/owl/owl.carousel.min.css" />
-    <link
-      rel="stylesheet"
-      href="../assests/css/owl/owl.theme.default.min.css"
-    />
-
-    <!-------popup--------->
-    <link rel="stylesheet" href="../assests/css/popup/magnific-popup.css" />
-
-    <style>
-      .fi-padding {
-        padding-bottom: 0em;
-      }
-      @-webkit-keyframes fi-spin {
-        from {
-          -webkit-transform: rotate(0);
-          -o-transform: rotate(0);
-          transform: rotate(0);
-        }
-        to {
-          -webkit-transform: rotate(360deg);
-          -o-transform: rotate(360deg);
-          transform: rotate(360deg);
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zaara Tours – 10 Nights 11 Days Sri Lanka</title>
+  <link rel="shortcut icon" href="../assests/images/logo/Zaara Logoxwhite.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Poiret One"', 'cursive'],
+            body: ['Ubuntu', 'sans-serif'],
+          }
         }
       }
-      @keyframes fi-spin {
-        from {
-          -ms-transform: rotate(0);
-          -moz-transform: rotate(0);
-          -webkit-transform: rotate(0);
-          -o-transform: rotate(0);
-          transform: rotate(0);
-        }
-        to {
-          -ms-transform: rotate(360deg);
-          -moz-transform: rotate(360deg);
-          -webkit-transform: rotate(360deg);
-          -o-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      .fi-spin {
-        -webkit-animation: fi-spin 2s linear infinite;
-        -moz-animation: fi-spin 2s linear infinite;
-        -ms-animation: fi-spin 2s linear infinite;
-        -o-animation: fi-spin 2s linear infinite;
-        animation: fi-spin 2s linear infinite;
-      }
-      .fi-spin-ccw {
-        -webkit-animation: fi-spin 2s linear infinite;
-        -moz-animation: fi-spin 2s linear infinite;
-        -ms-animation: fi-spin 2s linear infinite;
-        -o-animation: fi-spin 2s linear infinite;
-        animation: fi-spin 2s linear infinite;
-        animation-direction: reverse;
-      }
-      .fi-pulse {
-        -webkit-animation: fi-spin 2s infinite steps(8);
-        -moz-animation: fi-spin 2s infinite steps(8);
-        -ms-animation: fi-spin 2s infinite steps(8);
-        -o-animation: fi-spin 2s infinite steps(8);
-        animation: fi-spin 2s infinite steps(8);
-      }
-      .fi-pulse-ccw {
-        -webkit-animation: fi-spin 2s infinite steps(8);
-        -moz-animation: fi-spin 2s infinite steps(8);
-        -ms-animation: fi-spin 2s infinite steps(8);
-        -o-animation: fi-spin 2s infinite steps(8);
-        animation: fi-spin 2s infinite steps(8);
-        animation-direction: reverse;
-      }
-    </style>
-    <script defer="" src="https://friconix.com/cdn/friconix.js"></script>
-  </head>
-  <body>
-    <div class="preloader" style="display: none">
-      <!--<div id="businesslogo"><img src="assests/img/logo/uimountainlogo.png" alt="" width="180px"></div>-->
-      <div class="status" style="display: none"></div>
-    </div>
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
 
-    <!--
-     +--------------------------------------+
-     +                                      +
-     +               header                 +
-     +                                      +
-     +--------------------------------------+
--->
+    /* Nav */
+    .nav-item .nav-dropdown { display: none; }
+    .nav-item:hover .nav-dropdown { display: block; }
+    .nav-nested-item .nav-nested-dropdown { display: none; }
+    .nav-nested-item:hover .nav-nested-dropdown { display: block; }
+    /* Bridge: fills the gap so hover isn't lost moving into the dropdown */
+    .nav-dropdown::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      height: 10px;
+    }
+    .nav-nested-dropdown::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -8px;
+      width: 8px;
+      height: 100%;
+    }
+    #main-nav {
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    #main-nav.scrolled {
+      background: rgba(10, 14, 20, 0.97) !important;
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+    }
+    #main-nav.nav-open {
+      background: rgba(10, 14, 20, 0.97) !important;
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+    }
 
-    <header>
-      <nav id="nav1" class="nav-bar fixed-top" style="height: 85px">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 col-md-4 col-lg-2">
-              <img
-                src="../assests/images/logo/Zaara Logoxwhite.png"
-                id="navimg"
-                width='50%"'
-              />
-            </div>
+    /* Mobile drawer */
+    #mobile-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    #mobile-menu.open {
+      transform: translateX(0);
+    }
 
-            <div class="col-12 col-md-12 col-lg-10">
-              <div class="row">
-                <!--<div class="col-12 col-md-12 col-sm-12 text-right">-->
-                <!--<h6 style="display: inline-block"><i class="fi-xwlrxl-phone-wide"></i>+(94) 702 612683</h6><br>-->
-                <!--<h6 style="display: inline-block; padding-left: 5px;"><i class="fi-xwluxl-envelope-wide"></i>info@zaaratours.com</h6>-->
-                <!--</div>-->
+    /* ── HERO ── */
+    .hero-img {
+      background: url('../assests/images/packages/p1.jpg') center/cover no-repeat;
+    }
 
-                <div class="col-12 col-md-12 col-sm-12 mt-3">
-                  <ol id="nav1-ol" style="margin-left: 200px">
-                    <a
-                      href="../index.php"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Home</li></a
-                    >
-                    <li class="dropdown-title">
-                      About<i class="fi-xwsdxl-caret-solid a-down"
-                        ><svg
-                          class="fi-padding"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1000mm"
-                          height="1000mm"
-                          viewBox="0 0 1000 1000"
-                          style="
-                            width: 1.33em;
-                            height: 1.33em;
-                            vertical-align: middle;
-                          "
-                        >
-                          <path
-                            id="path"
-                            fill="currentColor"
-                            d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                            transform="rotate(180, 500, 500) "
-                          ></path></svg></i
-                      ><i class="fi-xwsuxl-caret-solid a-up"
-                        ><svg
-                          class="fi-padding"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1000mm"
-                          height="1000mm"
-                          viewBox="0 0 1000 1000"
-                          style="
-                            width: 1.33em;
-                            height: 1.33em;
-                            vertical-align: middle;
-                          "
-                        >
-                          <path
-                            id="path"
-                            fill="currentColor"
-                            d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                            transform=""
-                          ></path></svg
-                      ></i>
+    /* ── ROUTE STRIP ── */
+    .route-sep::after { content: '›'; margin: 0 0.5rem; opacity: 0.5; }
+    .route-sep:last-child::after { content: ''; }
 
-                      <div class="dropdown-nav-menu">
-                        <ol>
-                          <a
-                            href="about.html"
-                            style="text-decoration: inherit; color: inherit"
-                            ><li>Our Story</li></a
-                          >
-                          <a
-                            href="about.html#about-sec-3"
-                            style="text-decoration: inherit; color: inherit"
-                            ><li>Chairman Message</li></a
-                          >
-                        </ol>
-                      </div>
-                    </li>
-                    <li class="dropdown-title">
-                      Tours<i class="fi-xwsdxl-caret-solid a-down"
-                        ><svg
-                          class="fi-padding"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1000mm"
-                          height="1000mm"
-                          viewBox="0 0 1000 1000"
-                          style="
-                            width: 1.33em;
-                            height: 1.33em;
-                            vertical-align: middle;
-                          "
-                        >
-                          <path
-                            id="path"
-                            fill="currentColor"
-                            d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                            transform="rotate(180, 500, 500) "
-                          ></path></svg></i
-                      ><i class="fi-xwsuxl-caret-solid a-up"
-                        ><svg
-                          class="fi-padding"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="1000mm"
-                          height="1000mm"
-                          viewBox="0 0 1000 1000"
-                          style="
-                            width: 1.33em;
-                            height: 1.33em;
-                            vertical-align: middle;
-                          "
-                        >
-                          <path
-                            id="path"
-                            fill="currentColor"
-                            d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                            transform=""
-                          ></path></svg
-                      ></i>
+    /* ── DAY CARDS ── */
+    .day-img { overflow: hidden; }
+    .day-img img { transition: transform 0.5s ease; }
+    .day-img:hover img { transform: scale(1.04); }
 
-                      <div class="dropdown-nav-menu">
-                        <ol>
-                          <li class="dropdown-title2">
-                            Visit Sri Lanka<i
-                              class="fi-xwsdxl-caret-solid a2-down"
-                              ><svg
-                                class="fi-padding"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="1000mm"
-                                height="1000mm"
-                                viewBox="0 0 1000 1000"
-                                style="
-                                  width: 1.33em;
-                                  height: 1.33em;
-                                  vertical-align: middle;
-                                "
-                              >
-                                <path
-                                  id="path"
-                                  fill="currentColor"
-                                  d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                                  transform="rotate(180, 500, 500) "
-                                ></path></svg></i
-                            ><i class="fi-xwsrxl-caret-solid a2-right"
-                              ><svg
-                                class="fi-padding"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="1000mm"
-                                height="1000mm"
-                                viewBox="0 0 1000 1000"
-                                style="
-                                  width: 1.33em;
-                                  height: 1.33em;
-                                  vertical-align: middle;
-                                "
-                              >
-                                <path
-                                  id="path"
-                                  fill="currentColor"
-                                  d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                                  transform="rotate(90, 500, 500) "
-                                ></path></svg
-                            ></i>
-
-                            <div class="dropdown-nav-menu2">
-                              <ol>
-                                <a
-                                  href="p1.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>5 Night 6 Days</li></a
-                                >
-                                <a
-                                  href="p2.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>7 Night 8 Days</li></a
-                                >
-                                <a
-                                  href="p3.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>9 Night 10 Days</li></a
-                                >
-                                <a
-                                  href="#"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>10 Night 11 Days</li></a
-                                >
-                                <a
-                                  href="t-3-sport.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Sport Tours</li></a
-                                >
-                                <a
-                                  href="t-4-education.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Education Tours</li></a
-                                >
-                                <a
-                                  href="t-5-vandana.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Vandana Tours</li></a
-                                >
-                              </ol>
-                            </div>
-                          </li>
-                          <li class="dropdown-title2">
-                            Visit Global<i class="fi-xwsdxl-caret-solid a2-down"
-                              ><svg
-                                class="fi-padding"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="1000mm"
-                                height="1000mm"
-                                viewBox="0 0 1000 1000"
-                                style="
-                                  width: 1.33em;
-                                  height: 1.33em;
-                                  vertical-align: middle;
-                                "
-                              >
-                                <path
-                                  id="path"
-                                  fill="currentColor"
-                                  d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                                  transform="rotate(180, 500, 500) "
-                                ></path></svg></i
-                            ><i class="fi-xwsrxl-caret-solid a2-right"
-                              ><svg
-                                class="fi-padding"
-                                role="img"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="1000mm"
-                                height="1000mm"
-                                viewBox="0 0 1000 1000"
-                                style="
-                                  width: 1.33em;
-                                  height: 1.33em;
-                                  vertical-align: middle;
-                                "
-                              >
-                                <path
-                                  id="path"
-                                  fill="currentColor"
-                                  d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                                  transform="rotate(90, 500, 500) "
-                                ></path></svg
-                            ></i>
-
-                            <div class="dropdown-nav-menu2">
-                              <ol>
-                                <a
-                                  href="out1.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Singapor Tour</li></a
-                                >
-                                <a
-                                  href="out2.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Vietnam Tour</li></a
-                                >
-                                <a
-                                  href="out3.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Malaysia Tour</li></a
-                                >
-                                <a
-                                  href="out4.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Thailand Tour</li></a
-                                >
-                                <a
-                                  href="t-3-sport.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Sport Tours</li></a
-                                >
-                                <a
-                                  href="t-4-education.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Education Tours</li></a
-                                >
-                                <a
-                                  href="t-5-vandana.html"
-                                  style="
-                                    text-decoration: inherit;
-                                    color: inherit;
-                                  "
-                                  ><li>Vandana Tours</li></a
-                                >
-                              </ol>
-                            </div>
-                          </li>
-                        </ol>
-                      </div>
-                    </li>
-                    <a
-                      href="srilanka.html"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Sri Lanka</li></a
-                    >
-                    <a
-                      href="bridal-cars.html"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Bridal Cars</li></a
-                    >
-                    <a
-                      href="zaara-agro.html"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Zaara Agro</li></a
-                    >
-                    <a
-                      href="t-6-event.html"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Event Media</li></a
-                    >
-                    <a
-                      href="../index.php#section10"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Contact</li></a
-                    >
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <nav
-        id="nav2"
-        class="collapse navbar-collapse navbar-ex1-collapse"
-        style="position: fixed; z-index: 999"
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-white overflow-x-hidden">
+    <!-- ================================================
+     NAVIGATION
+     ================================================ -->
+    <nav
+      id="main-nav"
+      class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-950/90 to-gray-900/85 backdrop-blur-sm"
+    >
+      <!-- Desktop -->
+      <div
+        class="hidden lg:flex items-center justify-between px-8 py-3 max-w-screen-2xl mx-auto"
       >
-        <div class="pos-f-t" style="overflow-y: auto">
-          <div class="collapse" id="navbarToggleExternalContent">
-            <div class="p-4 text-left">
-              <img
-                src="../assests/images/logo/Zaara Logoxwhite.png"
-                width="30%"
-              />
-              <ol
-                class="font-ubuntu"
-                style="
-                  list-style: none;
-                  height: 50vh;
-                  padding: 0;
-                  overflow-y: auto;
-                "
-                id="nav2-main-mobi"
-              >
-                <li>
-                  <a
-                    href="../index.php"
-                    style="text-decoration: inherit; color: inherit"
-                    >Home</a
-                  >
-                </li>
-                <li class="">
-                  <a
-                    href="javascript:;"
-                    data-toggle="collapse"
-                    data-target="#demo1"
-                    style="text-decoration: none; color: inherit"
-                    ><i class="fas fa-book"></i> About<i
-                      class="fi-xwsdxl-caret-solid a-down"
-                      ><svg
-                        class="fi-padding"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1000mm"
-                        height="1000mm"
-                        viewBox="0 0 1000 1000"
-                        style="
-                          width: 1.33em;
-                          height: 1.33em;
-                          vertical-align: middle;
-                        "
-                      >
-                        <path
-                          id="path"
-                          fill="currentColor"
-                          d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                          transform="rotate(180, 500, 500) "
-                        ></path></svg></i
-                  ></a>
-                  <ul id="demo1" class="collapse nav2-style-mobi">
-                    <a
-                      href="about.html"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Our Story</li></a
-                    >
+        <a href="../index.html" class="flex-shrink-0">
+          <img
+            src="../assests/images/logo/ZaaraMainLogo.png"
+            alt="Zaara Tours International"
+            class="h-14"
+          />
+        </a>
 
-                    <a
-                      href="about.html#about-sec-3"
-                      style="text-decoration: inherit; color: inherit"
-                      ><li>Chairman Message</li></a
-                    >
-                  </ul>
-                </li>
-                <li>
-                  <a
-                    href="javascript:;"
-                    data-toggle="collapse"
-                    data-target="#demo2"
-                    style="text-decoration: none; color: inherit"
-                    ><i class="fas fa-book"></i> Tours<i
-                      class="fi-xwsdxl-caret-solid a-down"
-                      ><svg
-                        class="fi-padding"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1000mm"
-                        height="1000mm"
-                        viewBox="0 0 1000 1000"
-                        style="
-                          width: 1.33em;
-                          height: 1.33em;
-                          vertical-align: middle;
-                        "
-                      >
-                        <path
-                          id="path"
-                          fill="currentColor"
-                          d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                          transform="rotate(180, 500, 500) "
-                        ></path></svg></i
-                  ></a>
-                  <ul id="demo2" class="collapse nav2-style-mobi">
-                    <li class="">
-                      <a
-                        href="javascript:;"
-                        data-toggle="collapse"
-                        data-target="#demo3"
-                        style="text-decoration: none; color: inherit"
-                        ><i class="fas fa-book"></i> Visit Sri Lanak
-                        <i class="fi-xwsdxl-caret-solid a-down"
-                          ><svg
-                            class="fi-padding"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1000mm"
-                            height="1000mm"
-                            viewBox="0 0 1000 1000"
-                            style="
-                              width: 1.33em;
-                              height: 1.33em;
-                              vertical-align: middle;
-                            "
-                          >
-                            <path
-                              id="path"
-                              fill="currentColor"
-                              d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                              transform="rotate(180, 500, 500) "
-                            ></path></svg></i
-                      ></a>
-                      <ul id="demo3" class="collapse nav2-style-mobi-2">
-                        <a
-                          href="p1.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>5 Night 6 Days</li></a
-                        >
-                        <a
-                          href="p2.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>7 Night 8 Days</li></a
-                        >
-                        <a
-                          href="p3.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>9 Night 10 Days</li></a
-                        >
-                        <a
-                          href="#"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>10 Night 11 Days</li></a
-                        >
-                        <a
-                          href="t-3-sport.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Sport Tours</li></a
-                        >
-                        <a
-                          href="t-4-education.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Education Tours</li></a
-                        >
-                        <a
-                          href="t-5-vandana.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Vandana Tours</li></a
-                        >
-                      </ul>
-                    </li>
-                    <li class="">
-                      <a
-                        href="javascript:;"
-                        data-toggle="collapse"
-                        data-target="#demo4"
-                        style="text-decoration: none; color: inherit"
-                        ><i class="fas fa-book"></i> Visit Global<i
-                          class="fi-xwsdxl-caret-solid a-down"
-                          ><svg
-                            class="fi-padding"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="1000mm"
-                            height="1000mm"
-                            viewBox="0 0 1000 1000"
-                            style="
-                              width: 1.33em;
-                              height: 1.33em;
-                              vertical-align: middle;
-                            "
-                          >
-                            <path
-                              id="path"
-                              fill="currentColor"
-                              d=" M 527 323C 527 323 727 523 727 523C 737 534 740 550 735 564C 729 578 715 587 700 588C 700 588 300 588 300 588C 285 587 271 578 265 564C 260 550 263 534 273 523C 273 523 473 323 473 323C 480 317 490 313 499 313C 510 312 519 316 527 323C 527 323 527 323 527 323"
-                              transform="rotate(180, 500, 500) "
-                            ></path></svg></i
-                      ></a>
-                      <ul id="demo4" class="collapse nav2-style-mobi-2">
-                        <a
-                          href="out1.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Singapor Tour</li></a
-                        >
-                        <a
-                          href="out2.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Vietnam Tour</li></a
-                        >
-                        <a
-                          href="out3.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Malaysia Tour</li></a
-                        >
-                        <a
-                          href="out4.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Thailand Tour</li></a
-                        >
-                        <a
-                          href="t-3-sport.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Sport Tours</li></a
-                        >
-                        <a
-                          href="t-4-education.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Education Tours</li></a
-                        >
-                        <a
-                          href="t-5-vandana.html"
-                          style="text-decoration: inherit; color: inherit"
-                          ><li>Vandana Tours</li></a
-                        >
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a
-                    href="srilanka.html"
-                    style="text-decoration: inherit; color: inherit"
-                    >Sri Lanka</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="t-6-event.html"
-                    style="text-decoration: inherit; color: inherit"
-                    >Event Media</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../index.php#section10"
-                    style="text-decoration: inherit; color: inherit"
-                    >Contact</a
-                  >
-                </li>
-              </ol>
-            </div>
-          </div>
-          <nav
-            class="navbar navbar-dark"
-            style="background: rgba(0, 0, 0, 0.7)"
+        <div class="flex items-center gap-1 text-white text-sm font-medium">
+          <div
+            class="flex items-center gap-5 mr-6 text-gray-300 text-xs border-r border-gray-700 pr-6"
           >
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarToggleExternalContent"
-              aria-controls="navbarToggleExternalContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              style="color: #007bff"
-            >
-              <i class="fi-xnsuxl-three-bars-solid"
-                ><svg
-                  class="fi-padding"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1000mm"
-                  height="1000mm"
-                  viewBox="0 0 1000 1000"
-                  style="width: 1.33em; height: 1.33em; vertical-align: middle"
-                >
-                  <path
-                    id="path"
-                    fill="currentColor"
-                    d=" M 200 688C 200 688 800 688 800 688C 823 687 844 699 855 718C 866 738 866 762 855 782C 844 801 823 813 800 812C 800 812 200 812 200 812C 177 813 156 801 145 782C 134 762 134 738 145 718C 156 699 177 687 200 688C 200 688 200 688 200 688M 200 437C 200 437 800 437 800 437C 823 437 844 449 855 468C 866 488 866 512 855 532C 844 551 823 563 800 563C 800 563 200 563 200 563C 177 563 156 551 145 532C 134 512 134 488 145 468C 156 449 177 437 200 437C 200 437 200 437 200 437M 200 188C 200 188 800 188 800 188C 823 187 844 199 855 218C 866 238 866 262 855 282C 844 301 823 313 800 312C 800 312 200 312 200 312C 177 313 156 301 145 282C 134 262 134 238 145 218C 156 199 177 187 200 188C 200 188 200 188 200 188"
-                    transform=""
-                  ></path></svg
-              ></i>
-            </button>
-            <img
-              src="../assests/images/logo/Zaara Logoxwhite.png"
-              width="15%"
-            />
-          </nav>
-        </div>
-      </nav>
-    </header>
-
-    <!--
-     +--------------------------------------+
-     +                                      +
-     +                main                  +
-     +                                      +
-     +--------------------------------------+
--->
-
-    <main>
-      <section id="tour-sec1">
-        <section id="top-img6" class="a-sec-1">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col-12">
-                <h1
-                  class="a-title wow zoomIn"
-                  style="visibility: visible; animation-name: zoomIn"
-                >
-                  <span class="font-piorat"
-                    ><strong>10 NIGHTS 11 DAYS</strong></span
-                  >
-                </h1>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="section2">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-lg-6 text-center">
-                <h1>
-                  <span>Discover Our</span> <br />
-                  10 NIGHTS 11 DAYS <br />
-                  PACKAGE
-                </h1>
-                <h5>Details</h5>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-center">
-                <img
-                  src="../assests\images\packages\10-11.png"
-                  alt=""
-                  width="70%"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="section3" class="secdivider">
-          <div class="container">
-            <!-- Day 1 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\j.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 1</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Arrival &gt; Negombo <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive: <br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: <br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • Ayubowan (May you live long!).<br />
-                • Your friendly Sri Lanka driver/guide will welcome you and then
-                you will be transferred to the fishing village of Negombo,
-                located near the airport so you can relax after a long flight
-                journey.<br />
-                • Negombo is certainly not just to relax on the beach, but this
-                coastal city has a rich history to share with you.<br />
-              </div>
-            </div>
-
-            <!-- Day 2 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\e.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 2</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Negombo &gt; Habarana &gt; Dambulla <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in Sigiriya/Habarana <br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • After breakfast, visit one of the country’s busiest fishing
-                centre, where colourful rural boats sailing in the sea.<br />
-                • Make a city tour to see the remaining of the Dutch period
-                architectures, canals, a Buddhist temple, a Catholic church.<br />
-                • Then depart to the cultural triangle at the centre of the
-                island in the morning.<br /><span id="dots"></span
-                ><span id="more">
-                  • Visit the Dambulla Cave Temple UNESCO World Heritage site,
-                  the most impressive cave temple in Sri Lanka.<br />
-                  • Stay overnight in Sigiriya/Habarana.<br />
-                </span>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  onclick="myFunction()"
-                  id="myBtn"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-
-            <!-- Day 3 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\a.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 3</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Polonnaruwa &gt; Sigiriya rock fortress<br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in Habarana/ Sigiriya<br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • Visit one of Asia’s most spectacular cultural sites the
-                Sigiriya Rock Fortress, the UNESCO World Heritage site. Only the
-                fit and adventurous will be able to climb the summit, but all
-                can enjoy the ancient ruins and wonderful sights around the base
-                and halfway on the hike. It's home to water gardens, frescoes
-                and ancient graffiti.<br />
-                • Afternoon, visit Polonnaruwa, the ancient city is also rich in
-                monasteries <span id="dots1"></span
-                ><span id="more1">
-                  and Buddhist remains from this kingdom. The most interesting
-                  of all would be the ‘Gal Vihara’, meaning the rock Temple.<br />
-                  • Stay overnight in Habarana/ Sigiriya.<br />
-                  Optional:<br />
-                  • Jeep safari at Minneriya National Park<br />
-                  • Visit a rural village and experience Sri Lanka’s calm rural
-                  village life.<br />
-                </span>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  onclick="myFunction1()"
-                  id="myBtn1"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-
-            <!-- Day 4 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\m.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 4</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Dambulla &gt; Matale &gt; Kandy <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel:<br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • After breakfast, depart to Kandy via Matale.<br />
-                • On the way to Kandy, visit Matale Aluvihare Temple where
-                Buddhist doctrines were first documented on Ola leaves on 1st
-                century after passing through orally from generation to
-                generation and Spice Garden at Matale.<br />
-                • Explore the UNESCO World Heritage site, The Temple of the
-                Tooth Relic.<br />
-                • See famous Blue &amp; Star sapphires are mined cut and
-                polished using <span id="dots2"></span
-                ><span id="more2">
-                  traditional methods.<br />
-                  • End the day enjoying a culture show in Kandy.<br />
-                </span>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  onclick="myFunction2()"
-                  id="myBtn2"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-
-            <!-- Day 5 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\b.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 5</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Kandy city tour <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in Kandy <br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • Visit Peradeniya Botanical Garden at Peradeniya in the morning
-                which is well-known for its collection of over 4000 species of
-                plants, including of orchids, spices, medicinal plants and palm
-                trees.<br />
-                • It’s also worthy to tour around Kandy, beautiful lake,
-                colourful streets, colonial architecture, museums, an arts and
-                crafts workshop, oriental market place and a bazaar.<br />
-                • Stay overnight in Kandy.<br />
-              </div>
-            </div>
-
-            <!-- Day 6 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\c.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 6</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Kandy &gt; Nuwara Eliya <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in Nuwara Eliya <br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • Head over to Nuwara Eliya, the ‘little England’, popular for
-                its Victorian-era structures and the mild weather. It’s
-                chilled-out weather and eccentric scenes of tea plantations,
-                waterfalls and mountain ranges.<br />
-                • Visit Tea Factory to see how the tea you drink is produced.<br />
-                • It’s worth to visit Local Market and Gregory Lake in the
-                evening.<br />
-                • Stay overnight in Nuwara Eliya<br />
-              </div>
-            </div>
-
-            <!-- Day 7 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\n.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 7</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Hoton plains <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in Nuwara Eliya<br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • This morning after breakfast, depart to The Horton Plains,
-                which is a stunning, silent and strange world with some
-                fantastic hikes in the shadows of Sri Lanka’s second and third
-                highest mountains. The plains themselves rich in biodiversity
-                and with a high proportion of locally endemic species. The
-                park's altitude is 2,100 – 2,300 metres and is covered by wild
-                grasslands and combinations of thick forest, rocky outcrops,
-                filigree waterfalls and <span id="dots3"></span
-                ><span id="more3">
-                  misty lakes. The main attraction is the point called Worlds
-                  End, where you can see the ground drop 880 metres. If lucky
-                  enough, you will beat the fog and mist to be able to see
-                  jaw-dropping views of miniature tea plantation villages in the
-                  valley below, all the way out to the south coast.<br />
-                  • Stay overnight in Nuwara Eliya<br />
-                </span>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  onclick="myFunction3()"
-                  id="myBtn3"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-
-            <!-- Day 8 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\o.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 8</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Ella &gt; Kataragama &gt; Yala <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in Tissa / Yala<br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • Transfer to Yala after breakfast.<br />
-                • On the way, visit Ella Gap &amp; Rawana Falls.<br />
-                • Reach the hotel in Yala and prepare yourself for a jeep safari
-                at the most visited and popular park in the country, The Yala
-                National Park. It has a remarkable characteristic of the
-                tropical forest bordering the sea.<br />
-                • Visit the Kataragama Hindu Kovil, an ancient pilgrimage site
-                where all main <span id="dots4"></span
-                ><span id="more4">
-                  religions are worshipped. Buddhists, Hindus, Muslims, and
-                  Christians visit this ancient holy site. It is believed that
-                  King Dutugemunu the warrior king and Sinhala popular hero
-                  built a monument here for the worship of the Kataragama God in
-                  the 2nd century BC.<br />
-                  • Stay overnight in Tissa / Yala.<br />
-                </span>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  onclick="myFunction4()"
-                  id="myBtn4"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-
-            <!-- Day 9 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\g.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 9</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Yala national park <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in Tissa / Yala<br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • Early morning prepare yourself for a jeep safari at the most
-                visited and popular park in the country, The Yala National Park.
-                It has a remarkable characteristic of the tropical forest
-                bordering the sea. Your opportunity to catch the sight of the
-                Sri Lankan Leopard, Asian Elephant, and many other mammals and
-                birds in their natural habitat going on a Safari and in the
-                wild.<br />
-                • Stay overnight in Tissa / Yala.<br />
-              </div>
-            </div>
-
-            <!-- Day 10 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\d.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 10</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: South / west coast <br />
-                  <i class="fi-xwsuxl-car-front-small"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 366 249C 366 249 366 249 366 249C 369 249 372 249 375 249C 375 249 625 250 625 250C 675 250 715 251 739 315C 739 315 765 385 765 385C 770 400 780 400 790 400C 790 400 815 400 815 400C 830 400 841 414 841 425C 841 425 842 450 842 450C 842 465 832 475 817 475C 810 475 800 475 800 485C 800 535 800 650 750 650C 750 650 751 725 751 725C 751 740 740 750 725 750C 725 750 675 750 675 750C 660 750 650 740 650 725C 650 725 650 650 650 650C 650 650 350 650 350 650C 350 650 350 725 350 725C 350 740 338 751 323 751C 323 751 275 750 275 750C 260 750 250 743 250 728C 250 728 250 650 250 650C 200 650 205 535 205 485C 205 475 195 475 185 475C 170 476 160 465 160 450C 160 450 159 425 159 425C 159 410 170 400 185 400C 185 400 210 400 210 400C 223 400 230 400 235 385C 235 385 260 315 260 315C 280 252 320 249 366 249M 335 285C 335 285 335 285 335 285C 320 285 305 300 300 315C 300 315 270 400 270 400C 265 415 275 425 285 425C 285 425 715 425 715 425C 725 425 735 415 730 400C 730 400 700 315 700 315C 695 300 680 285 665 285C 665 285 335 285 335 285M 300 475C 300 475 300 475 300 475C 272 475 250 497 250 525C 250 553 272 575 300 575C 328 575 350 553 350 525C 350 497 328 475 300 475M 700 475C 700 475 700 475 700 475C 672 475 650 497 650 525C 650 553 672 575 700 575C 728 575 750 553 750 525C 750 497 728 475 700 475"
-                        transform=""
-                      ></path></svg></i
-                  >Drive:<br />
-                  <i class="fi-xnluxl-building"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 750 75C 764 75 775 86 775 100C 775 100 775 875 775 875C 775 875 800 875 800 875C 814 875 825 886 825 900C 825 914 814 925 800 925C 800 925 200 925 200 925C 186 925 175 914 175 900C 175 886 186 875 200 875C 200 875 225 875 225 875C 225 875 225 100 225 100C 225 86 236 75 250 75C 250 75 750 75 750 75M 275 875C 275 875 437 875 437 875C 437 875 437 725 437 725C 438 718 443 713 450 713C 450 713 550 713 550 713C 557 713 562 718 563 725C 563 725 563 875 563 875C 563 875 725 875 725 875C 725 875 725 125 725 125C 725 125 275 125 275 125C 275 125 275 875 275 875M 450 188C 457 188 462 193 462 200C 462 200 462 300 462 300C 462 307 457 312 450 312C 450 312 350 312 350 312C 343 312 338 307 337 300C 337 300 337 200 337 200C 338 193 343 188 350 188C 350 188 450 188 450 188M 650 188C 657 188 662 193 663 200C 663 200 663 300 663 300C 662 307 657 312 650 312C 650 312 550 312 550 312C 543 312 538 307 538 300C 538 300 538 200 538 200C 538 193 543 188 550 188C 550 188 650 188 650 188M 450 362C 457 363 462 368 462 375C 462 375 462 475 462 475C 462 482 457 487 450 487C 450 487 350 487 350 487C 343 487 338 482 337 475C 337 475 337 375 337 375C 338 368 343 363 350 362C 350 362 450 362 450 362M 650 362C 657 363 662 368 663 375C 663 375 663 475 663 475C 662 482 657 487 650 487C 650 487 550 487 550 487C 543 487 538 482 538 475C 538 475 538 375 538 375C 538 368 543 363 550 362C 550 362 650 362 650 362M 450 538C 457 538 462 543 462 550C 462 550 462 650 462 650C 462 657 457 662 450 663C 450 663 350 663 350 663C 343 662 338 657 337 650C 337 650 337 550 337 550C 338 543 343 538 350 538C 350 538 450 538 450 538M 650 538C 657 538 662 543 663 550C 663 550 663 650 663 650C 662 657 657 662 650 663C 650 663 550 663 550 663C 543 662 538 657 538 650C 538 650 538 550 538 550C 538 543 543 538 550 538C 550 538 650 538 650 538"
-                        transform=""
-                      ></path></svg></i
-                  >Hotel: Hotel in South Coast Beach<br />
-                  <i class="fi-xwllxl-file-wide"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 250 63C 250 63 250 63 250 63C 250 63 649 64 649 64C 659 64 668 68 675 74C 675 74 824 219 824 219C 831 226 835 236 835 246C 835 246 837 850 837 850C 838 898 798 937 750 937C 750 937 250 937 250 937C 202 937 163 898 163 850C 163 850 163 150 163 150C 163 104 200 65 246 63C 247 63 248 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63C 250 63 250 63 250 63M 238 150C 238 150 238 850 238 850C 238 858 242 862 250 862C 250 862 750 862 750 862C 758 862 763 858 763 850C 763 850 761 288 761 288C 761 288 650 287 650 287C 629 287 613 271 613 250C 613 250 612 139 612 139C 612 139 250 138 250 138C 250 138 250 138 250 138C 242 138 238 142 238 150C 238 150 238 150 238 150M 687 213C 687 213 709 213 709 213C 709 213 687 191 687 191C 687 191 687 213 687 213"
-                        transform="rotate(270, 500, 500) "
-                      ></path></svg></i
-                  >Highlihts:
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • After breakfast, proceed to see the famous stilt fishermen,
-                Salt Refinery and Fishing harbour in Hambantota on your way to
-                Galle.<br />
-                • Make a city tour in Galle city, UNESCO World Heritage Site
-                where tiny back streets in the Dutch Fort.<br />
-                • Visit the Galle Lighthouse, and enjoy a nice round tour to the
-                Dutch fort. You might like to buy some products from the quirky
-                shops, stopping in a <span id="dots5"></span
-                ><span id="more5">
-                  local cafe for lunch.<br />
-                  • Do not forget to visit Galle National Museum.<br />
-                  • Stay overnight in South Coast Beach.<br />
-                </span>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  onclick="myFunction5()"
-                  id="myBtn5"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-
-            <!-- Day 11 -->
-            <hr />
-            <div
-              class="row wow fadeInUp"
-              style="visibility: hidden; animation-name: none"
-            >
-              <div class="col-12 col-sm-12 col-lg-3 text-left">
-                <img
-                  src="../assests\images\packages\5-6\f.jpg"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="col-12 col-sm-12 col-lg-3">
-                <h5>Day 11</h5>
-                <p>
-                  <i class="fi-xnsuxl-map-marker-solid"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 88C 564 88 628 108 680 144C 794 222 843 379 794 507C 744 612 693 716 643 821C 617 870 601 930 548 957C 494 988 426 956 398 904C 340 788 285 670 228 553C 187 480 176 390 201 309C 237 182 362 88 494 88C 496 88 498 88 500 88C 500 88 500 88 500 88M 387 400C 387 462 438 512 500 512C 562 512 613 462 613 400C 613 338 562 287 500 287C 438 287 387 338 387 400C 387 400 387 400 387 400"
-                        transform=""
-                      ></path></svg></i
-                  >Route: Colombo – departure
-                </p>
-              </div>
-              <div class="col-12 col-sm-12 col-lg-6 text-left">
-                • After breakfast at the hotel, depart to Colombo.<br />
-                • En-route visit Kosgoda Turtle Hatchery.It is home to Sri
-                Lanka’s pioneering sea turtle conservation project, operated
-                with the help of international volunteers.<br />
-                • Later make a city tour in Colombo.It also recommended going
-                for a City Walk which is complementary on your [sensitive
-                content]lombo has got <span id="dots6"></span
-                ><span id="more6">
-                  Ayurvedic centres, Dutch Architecture of Pettah, Colonial-era
-                  remaining, Fort, Galle Face Green, and Independence Square,
-                  Old Parliament House and Beira Lake surroundings.<br />
-                  • Do not forget to do some last-minute shopping in shopping
-                  malls like House Fashion and Odel or an extended stay can be
-                  arranged.<br />
-                </span>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  onclick="myFunction6()"
-                  id="myBtn6"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-            <hr />
-          </div>
-        </section>
-      </section>
-    </main>
-
-    <br />
-
-    <!--
-     +--------------------------------------+
-     +                                      +
-     +               footer                 +
-     +                                      +
-     +--------------------------------------+
--->
-
-    <footer>
-      <div class="container" style="color: white">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
-            <h3 class="font-piorat">Quick Links</h3>
-
-            <ol style="list-style: none; padding: 0">
-              <li>
-                <a
-                  href="../index.php"
-                  style="text-decoration: inherit; color: inherit"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  style="text-decoration: inherit; color: inherit"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="t-1-srilanka.html"
-                  style="text-decoration: inherit; color: inherit"
-                  >Visit Sri Lanka</a
-                >
-              </li>
-              <li>
-                <a
-                  href="t-2-global.html"
-                  style="text-decoration: inherit; color: inherit"
-                  >Visit Global</a
-                >
-              </li>
-              <li>
-                <a
-                  href="t-3-sport.html"
-                  style="text-decoration: inherit; color: inherit"
-                  >Sport tours</a
-                >
-              </li>
-              <li>
-                <a
-                  href="t-6-event.html"
-                  style="text-decoration: inherit; color: inherit"
-                  >Event Media</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../index.php#section10"
-                  style="text-decoration: inherit; color: inherit"
-                  >Contact</a
-                >
-              </li>
-            </ol>
-          </div>
-          <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
-            <h3 class="font-piorat">Contact Details</h3>
-            <p>
-              NO:282/E, UC Road, Waduramulla<br />
-              Panadura, Sri Lanka.
-            </p>
-            <p>
-              +(94) 702 612683
-              <br />
-              +(94) 772 612683
-              <br />
+            <span class="flex items-center gap-1.5">
+              <svg class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
               +(94) 382 248354
-            </p>
-            <div class="container text-center">
-              <div class="row">
-                <div class="col-12 text-center">
-                  <a href="https://twitter.com/ToursZaara"
-                    ><i
-                      class="fi-xnsuxl-twitter"
-                      style="font-size: 20px; color: white"
-                      ><svg
-                        class="fi-padding"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1000mm"
-                        height="1000mm"
-                        viewBox="0 0 1000 1000"
-                        style="
-                          width: 1.33em;
-                          height: 1.33em;
-                          vertical-align: middle;
-                        "
-                      >
-                        <path
-                          id="path"
-                          fill="currentColor"
-                          d=" M 756 184C 758 186 760 187 761 189C 766 196 769 197 773 197C 778 198 785 198 793 195C 811 189 833 175 856 166C 868 161 883 167 888 179C 895 196 890 208 885 218C 883 222 881 226 879 230C 896 224 915 238 913 256C 911 270 905 277 899 286C 893 294 886 303 877 312C 864 325 850 338 836 349C 838 466 797 582 725 673C 634 789 488 855 342 853C 342 853 342 853 342 853C 342 853 341 853 341 853C 341 853 341 853 341 853C 341 853 341 853 341 853C 247 853 154 826 75 775C 65 768 61 756 65 745C 69 734 80 727 92 729C 151 736 214 725 267 698C 217 678 176 637 157 585C 155 577 156 569 160 562C 163 559 165 557 167 555C 123 519 95 464 96 405C 96 391 108 381 122 381C 89 323 87 249 123 191C 132 176 153 175 164 188C 235 277 343 336 456 349C 454 305 466 261 493 225C 530 173 592 147 653 149C 689 150 726 161 756 184C 756 184 756 184 756 184M 651 199C 606 198 560 218 534 254C 534 255 534 255 533 255C 509 287 500 331 509 371C 513 387 500 402 484 401C 359 396 238 340 152 250C 138 306 160 372 209 403C 218 409 223 420 220 431C 217 441 208 449 197 449C 180 450 165 447 151 443C 165 492 208 534 258 543C 268 545 276 553 278 564C 280 574 275 585 265 590C 248 599 233 599 220 598C 245 635 289 660 333 660C 344 660 353 667 357 677C 360 687 357 698 349 705C 302 742 247 766 189 776C 238 794 290 803 342 803C 342 803 342 803 342 803C 342 803 342 803 342 803C 473 805 605 746 685 642C 685 642 685 642 685 642C 753 557 791 446 786 338C 786 329 790 321 797 316C 803 312 810 306 818 299C 812 300 807 301 802 302C 789 303 778 296 775 284C 771 272 777 260 788 255C 791 253 796 249 802 244C 791 247 778 249 765 247C 750 244 736 236 725 223C 703 208 678 200 651 199C 651 199 651 199 651 199M 195 597C 195 597 194 597 194 597C 193 598 193 598 195 597C 195 597 195 597 195 597"
-                          transform=""
-                        ></path></svg></i
-                  ></a>
-                  &nbsp;
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              info@zaaratours.com
+            </span>
+          </div>
 
-                  <a href="https://www.facebook.com/zaaratours/"
-                    ><i class="fi-snsuxl-facebook" style="color: white"
-                      ><svg
-                        class="fi-padding"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1000mm"
-                        height="1000mm"
-                        viewBox="0 0 1000 1000"
-                        style="
-                          width: 1.33em;
-                          height: 1.33em;
-                          vertical-align: middle;
-                        "
-                      >
-                        <path
-                          id="path"
-                          fill="currentColor"
-                          d="M 75 0C 75 0 75 0 75 0C 33 0 0 33 0 75C 0 75 0 925 0 925C 0 967 33 1000 75 1000C 75 1000 925 1000 925 1000C 967 1000 1000 967 1000 925C 1000 925 1000 75 1000 75C 1000 33 967 0 925 0C 925 0 75 0 75 0 M 690 1000C 690 1000 534 1000 534 1000C 534 1000 534 613 534 613C 534 613 404 613 404 613C 404 613 404 462 404 462C 404 462 534 462 534 462C 534 462 534 350 534 350C 534 221 613 151 729 151C 784 151 831 155 845 157C 845 157 845 292 845 292C 845 292 765 292 765 292C 702 292 690 322 690 365C 690 365 690 462 690 462C 690 462 840 462 840 462C 840 462 820 613 820 613C 820 613 690 613 690 613C 690 613 690 1000 690 1000"
-                          transform=""
-                        ></path></svg></i
-                  ></a>
+          <a href="../index.html" class="px-3 py-2 hover:text-blue-400 transition-colors">Home</a>
 
-                  &nbsp;
-                  <i class="fi-xwsuxl-youtube" style="font-size: 25px"
-                    ><svg
-                      class="fi-padding"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1000mm"
-                      height="1000mm"
-                      viewBox="0 0 1000 1000"
-                      style="
-                        width: 1.33em;
-                        height: 1.33em;
-                        vertical-align: middle;
-                      "
-                    >
-                      <path
-                        id="path"
-                        fill="currentColor"
-                        d=" M 500 275C 500 275 500 275 500 275C 500 275 703 275 754 288C 781 296 803 318 811 346C 825 396 824 502 824 502C 824 502 824 607 811 658C 803 686 781 707 754 715C 703 728 500 728 500 728C 500 728 298 728 246 714C 219 707 197 685 189 657C 176 607 176 501 176 501C 176 501 176 396 189 346C 197 318 219 295 246 288C 297 275 500 275 500 275M 435 404C 435 404 435 404 435 404C 435 404 435 599 435 599C 435 599 604 501 604 501C 604 501 435 404 435 404"
-                        transform=""
-                      ></path></svg
-                  ></i>
+          <div class="nav-item relative px-3 py-2 hover:text-blue-400 cursor-pointer transition-colors">
+            About <span class="text-xs ml-0.5">▾</span>
+            <div class="nav-dropdown absolute top-full left-0 mt-1 bg-gray-900/97 border border-gray-700 rounded-xl shadow-2xl py-2 min-w-48 backdrop-blur-sm">
+              <a href="about.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Our Story</a>
+              <a href="about.html#about-sec-3" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Chairman Message</a>
+            </div>
+          </div>
+
+          <div class="nav-item relative px-3 py-2 text-blue-400 cursor-pointer transition-colors">
+            Tours <span class="text-xs ml-0.5">▾</span>
+            <div class="nav-dropdown absolute top-full left-0 mt-1 bg-gray-900/97 border border-gray-700 rounded-xl shadow-2xl py-2 min-w-48 backdrop-blur-sm">
+              <div class="nav-nested-item relative">
+                <div class="flex items-center justify-between px-4 py-2.5 bg-blue-600/20 text-blue-300 text-sm cursor-pointer rounded-lg mx-1">
+                  Visit Sri Lanka <span class="text-xs">›</span>
+                </div>
+                <div class="nav-nested-dropdown absolute left-full top-0 bg-gray-900/97 border border-gray-700 rounded-xl shadow-2xl py-2 min-w-44 backdrop-blur-sm">
+                  <a href="p1.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">5 Nights 6 Days</a>
+                  <a href="p2.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">7 Nights 8 Days</a>
+                  <a href="p3.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">9 Nights 10 Days</a>
+                  <a href="p4.html" class="block px-4 py-2.5 bg-blue-600/20 text-blue-300 text-sm">10 Nights 11 Days</a>
+                  <a href="t-3-sport.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Sport Tours</a>
+                  <a href="t-4-education.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Education Tours</a>
+                  <a href="t-5-vandana.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Vandana Tours</a>
+                </div>
+              </div>
+              <div class="nav-nested-item relative">
+                <div class="flex items-center justify-between px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors cursor-pointer">
+                  Visit Global <span class="text-xs">›</span>
+                </div>
+                <div class="nav-nested-dropdown absolute left-full top-0 bg-gray-900/97 border border-gray-700 rounded-xl shadow-2xl py-2 min-w-44 backdrop-blur-sm">
+                  <a href="out1.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Singapore Tour</a>
+                  <a href="out2.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Vietnam Tour</a>
+                  <a href="out3.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Malaysia Tour</a>
+                  <a href="out4.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Thailand Tour</a>
+                  <a href="t-3-sport.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Sport Tours</a>
+                  <a href="t-4-education.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Education Tours</a>
+                  <a href="t-5-vandana.html" class="block px-4 py-2.5 text-gray-200 text-sm hover:bg-blue-600 hover:text-white transition-colors">Vandana Tours</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
-            <img
-              src="../assests/images/logo/Zaara Logoxwhite.png"
-              alt=""
-              width="80%"
-            />
-          </div>
-        </div>
-        <div class="row footer-end1">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <h6>
-              Copyright 2020 © Zaara Tours International (PVT) ltd. All Rights
-              Reserved.
-            </h6>
-          </div>
-        </div>
-        <div class="row footer-end2">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <h6>
-              Concept designed and developed by &nbsp; <br />
-              <a
-                href="https://www.facebook.com/CodeVulcan-Developers-100364094817450/"
-                ><img
-                  src="../assests\images\footer\codeVulcanwhite.png"
-                  alt=""
-                  width="100px"
-              /></a>
-            </h6>
-          </div>
+
+          <a href="srilanka.html" class="px-3 py-2 hover:text-blue-400 transition-colors">Sri Lanka</a>
+          <a href="bridal-cars.html" class="px-3 py-2 hover:text-blue-400 transition-colors">Bridal Cars</a>
+          <a href="zaara-agro.html" class="px-3 py-2 hover:text-blue-400 transition-colors">Zaara Agro</a>
+          <a href="t-6-event.html" class="px-3 py-2 hover:text-blue-400 transition-colors">Event Media</a>
+          <a href="../index.html#contact" class="ml-2 px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors shadow-md">Contact</a>
         </div>
       </div>
 
-      <!--- Back to top --->
-      <a
-        href="#tour-sec1"
-        id="back-to-top"
-        class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll"
-        title="home"
-        role="button"
-        style="display: none"
-      >
-        <i class="fi-snsuxl-arrow-simple"
-          ><svg
-            class="fi-padding"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            width="1000mm"
-            height="1000mm"
-            viewBox="0 0 1000 1000"
-            style="width: 1.33em; height: 1.33em; vertical-align: middle"
-          >
-            <path
-              id="path"
-              fill="currentColor"
-              d="M 75 0C 75 0 75 0 75 0C 33 0 0 33 0 75C 0 75 0 925 0 925C 0 967 33 1000 75 1000C 75 1000 925 1000 925 1000C 967 1000 1000 967 1000 925C 1000 925 1000 75 1000 75C 1000 33 967 0 925 0C 925 0 75 0 75 0 M 517 232C 517 232 517 232 517 232C 518 232 518 232 518 232C 518 232 718 432 718 432C 728 442 728 458 718 468C 708 478 692 478 682 468C 682 468 525 310 525 310C 525 310 526 750 526 750C 526 764 515 776 501 776C 487 776 475 764 476 750C 476 750 475 310 475 310C 475 310 318 468 318 468C 308 478 292 478 282 468C 272 458 272 442 282 432C 282 432 479 235 479 235C 484 229 492 225 500 225C 506 225 513 227 517 232C 517 232 517 232 517 232"
-              transform=""
-            ></path></svg
-        ></i>
-      </a>
-    </footer>
+      <!-- Mobile bar -->
+      <div class="flex lg:hidden items-center justify-between px-5 py-3">
+        <a href="../index.html">
+          <img src="../assests/images/logo/Zaara Logoxwhite.png" alt="Zaara Tours" class="h-10" />
+        </a>
+        <button id="menu-toggle" class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+          <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
 
-    <!--
-     +--------------------------------------+
-     +                                      +
-     +                 js                   +
-     +                                      +
-     +--------------------------------------+-->
+    <!-- Mobile drawer -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-72 bg-gray-950 z-40 overflow-y-auto shadow-2xl lg:hidden pt-20">
+      <div class="p-5 space-y-1 text-white">
+        <a href="../index.html" class="block px-4 py-3 rounded-xl hover:bg-gray-800 transition-colors">Home</a>
+        <div>
+          <button class="accordion-btn w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-800 transition-colors">
+            About <span class="acc-icon text-gray-400 text-xs">▾</span>
+          </button>
+          <div class="acc-body hidden ml-3 mt-1 space-y-0.5">
+            <a href="about.html" class="block px-4 py-2.5 text-gray-300 hover:text-white hover:bg-gray-800 rounded-xl text-sm transition-colors">Our Story</a>
+            <a href="about.html#about-sec-3" class="block px-4 py-2.5 text-gray-300 hover:text-white hover:bg-gray-800 rounded-xl text-sm transition-colors">Chairman Message</a>
+          </div>
+        </div>
+        <div>
+          <button class="accordion-btn w-full flex items-center justify-between px-4 py-3 bg-gray-800 rounded-xl transition-colors">
+            Tours <span class="acc-icon text-gray-400 text-xs">▴</span>
+          </button>
+          <div class="acc-body ml-3 mt-1 space-y-0.5">
+            <div>
+              <button class="accordion-btn w-full flex items-center justify-between px-4 py-2.5 bg-blue-900/40 text-blue-300 rounded-xl text-sm transition-colors">
+                Visit Sri Lanka <span class="acc-icon text-gray-500 text-xs">▴</span>
+              </button>
+              <div class="acc-body ml-3 space-y-0.5">
+                <a href="p1.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">5 Nights 6 Days</a>
+                <a href="p2.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">7 Nights 8 Days</a>
+                <a href="p3.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">9 Nights 10 Days</a>
+                <a href="p4.html" class="block px-4 py-2 bg-blue-800/30 text-blue-300 rounded-xl text-xs">10 Nights 11 Days</a>
+                <a href="t-3-sport.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Sport Tours</a>
+                <a href="t-4-education.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Education Tours</a>
+                <a href="t-5-vandana.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Vandana Tours</a>
+              </div>
+            </div>
+            <div>
+              <button class="accordion-btn w-full flex items-center justify-between px-4 py-2.5 text-gray-300 hover:text-white hover:bg-gray-800 rounded-xl text-sm transition-colors">
+                Visit Global <span class="acc-icon text-gray-500 text-xs">▾</span>
+              </button>
+              <div class="acc-body hidden ml-3 space-y-0.5">
+                <a href="out1.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Singapore Tour</a>
+                <a href="out2.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Vietnam Tour</a>
+                <a href="out3.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Malaysia Tour</a>
+                <a href="out4.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Thailand Tour</a>
+                <a href="t-3-sport.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Sport Tours</a>
+                <a href="t-4-education.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Education Tours</a>
+                <a href="t-5-vandana.html" class="block px-4 py-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-xl text-xs transition-colors">Vandana Tours</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="srilanka.html" class="block px-4 py-3 rounded-xl hover:bg-gray-800 transition-colors">Sri Lanka</a>
+        <a href="bridal-cars.html" class="block px-4 py-3 rounded-xl hover:bg-gray-800 transition-colors">Bridal Cars</a>
+        <a href="zaara-agro.html" class="block px-4 py-3 rounded-xl hover:bg-gray-800 transition-colors">Zaara Agro</a>
+        <a href="t-6-event.html" class="block px-4 py-3 rounded-xl hover:bg-gray-800 transition-colors">Event Media</a>
+        <a href="../index.html#contact" data-close-menu class="block px-4 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-center font-medium transition-colors mt-3">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/50 z-30 lg:hidden"></div>
 
-    <!--------jquary--------->
-    <script src="../assests/js/jquary/jquery-3.4.1.min.js"></script>
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero-img relative h-screen flex items-center justify-center text-white">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70"></div>
+  <div class="relative text-center px-4">
+    <p class="text-blue-300 font-body text-sm tracking-widest uppercase mb-3">Sri Lanka Tour Package</p>
+    <h1 class="font-display text-5xl sm:text-7xl font-bold mb-4 drop-shadow-lg">10 Nights · 11 Days</h1>
+    <p class="font-body text-white/80 text-lg max-w-xl mx-auto">The ultimate journey through Sri Lanka's ancient wonders, highland scenery, and pristine coastlines.</p>
+    <a href="#overview" class="mt-8 inline-block px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-body font-medium transition">Explore Itinerary</a>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+</section>
 
-    <!------bootstrap-------->
-    <script src="../assests/js/bootstrap/bootstrap.min.js"></script>
+<!-- ═══════════════════════ OVERVIEW ═══════════════════════ -->
+<section id="overview" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <p class="text-blue-600 font-body text-sm font-semibold tracking-widest uppercase mb-2">Discover Sri Lanka</p>
+        <h2 class="font-display text-4xl font-bold text-gray-900 mb-4">10 Nights 11 Days Package</h2>
+        <p class="font-body text-gray-500 text-base leading-relaxed mb-6">The most comprehensive Sri Lanka experience — from misty highlands and ancient ruins to wildlife safaris, golden beaches and the vibrant streets of Colombo. Eleven days that leave nothing behind.</p>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="bg-blue-50 rounded-2xl p-4">
+            <p class="font-display text-2xl font-bold text-blue-600">11</p>
+            <p class="font-body text-xs text-gray-500 mt-1">Days</p>
+          </div>
+          <div class="bg-blue-50 rounded-2xl p-4">
+            <p class="font-display text-2xl font-bold text-blue-600">10</p>
+            <p class="font-body text-xs text-gray-500 mt-1">Nights</p>
+          </div>
+          <div class="bg-blue-50 rounded-2xl p-4">
+            <p class="font-display text-2xl font-bold text-blue-600">11+</p>
+            <p class="font-body text-xs text-gray-500 mt-1">Attractions</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal flex justify-center">
+        <img src="../assests/images/packages/10-11.png" alt="10 Nights 11 Days Package Overview" class="w-4/5 object-contain drop-shadow-xl" />
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!---------wow----------->
-    <script src="../assests/js/wowjs/wow.min.js"></script>
+<!-- ═══════════════════════ ROUTE STRIP ═══════════════════════ -->
+<section class="bg-gray-950 py-5 overflow-x-auto">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center gap-0 text-sm font-body text-white/60 whitespace-nowrap flex-wrap justify-center gap-y-1">
+      <span class="route-sep text-white font-medium">Arrival</span>
+      <span class="route-sep">Negombo</span>
+      <span class="route-sep">Dambulla</span>
+      <span class="route-sep">Sigiriya</span>
+      <span class="route-sep">Polonnaruwa</span>
+      <span class="route-sep">Kandy</span>
+      <span class="route-sep">Nuwara Eliya</span>
+      <span class="route-sep">Ella</span>
+      <span class="route-sep">Yala</span>
+      <span class="route-sep">Galle</span>
+      <span class="route-sep text-white font-medium">Colombo</span>
+    </div>
+  </div>
+</section>
 
-    <!--------owl---------->
-    <script src="../assests/js/owl/owl.carousel.min.js"></script>
+<!-- ═══════════════════════ ITINERARY ═══════════════════════ -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
-    <!--------owl---------->
-    <script src="../assests/js/popup/jquery.magnific-popup.min.js"></script>
+    <div class="text-center mb-12 reveal">
+      <p class="text-blue-600 font-body text-sm font-semibold tracking-widest uppercase mb-2">Day by Day</p>
+      <h2 class="font-display text-4xl font-bold text-gray-900">Your Journey Awaits</h2>
+    </div>
 
-    <!--------font-awesome---------->
-    <!--<script src="assests/css/fontawesome-free-5.10.2-web/js/all.min.js"></script>-->
-    <!--<script src="https://kit.fontawesome.com/a510959f49.js" crossorigin="anonymous"></script>-->
+    <!-- Day 1 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto">
+          <img src="../assests/images/packages/5-6/j.jpg" alt="Negombo" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">1</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 1</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Arrival → Negombo</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Airport → Negombo</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">30 min – 1 hr</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Negombo beach hotel</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Ayubowan (May you live long!) — your friendly driver/guide will welcome you at the airport.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Transfer to the charming fishing village of Negombo, conveniently located near the airport.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Relax after your journey — Negombo's coastal city has a rich history and beautiful beaches to explore.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <!--------main.js---------->
-    <script src="../assests/js/common/main/main.js"></script>
+    <!-- Day 2 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto md:order-last">
+          <img src="../assests/images/packages/5-6/e.jpg" alt="Dambulla" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">2</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 2</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Negombo → Habarana → Dambulla</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Negombo → Habarana → Dambulla</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">~3 hrs</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Sigiriya/Habarana</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>After breakfast, visit one of the country's busiest fishing centres with colourful rural boats sailing in the sea.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>City tour of Negombo: Dutch period architecture, canals, a Buddhist temple and a Catholic church.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Depart to the cultural triangle — visit the Dambulla Cave Temple, a stunning UNESCO World Heritage site.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <!--------packages.js---------->
-    <script src="../assests\js\common\packages\style.js"></script>
+    <!-- Day 3 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto">
+          <img src="../assests/images/packages/5-6/a.jpg" alt="Sigiriya" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">3</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 3</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Polonnaruwa → Sigiriya</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Polonnaruwa → Sigiriya Rock Fortress</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">~1.5 hrs</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Habarana/Sigiriya</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Visit Sigiriya Rock Fortress UNESCO World Heritage site — water gardens, ancient frescoes and graffiti.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Afternoon visit Polonnaruwa ancient city — monasteries, Buddhist remains and the magnificent Gal Vihara rock temple.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Optional: Jeep safari at Minneriya National Park or a peaceful rural village experience.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <!--------common.js---------->
-    <script src="../assests/js/common/common.js"></script>
+    <!-- Day 4 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto md:order-last">
+          <img src="../assests/images/packages/5-6/m.jpg" alt="Kandy" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">4</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 4</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Dambulla → Matale → Kandy</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Dambulla → Matale → Kandy</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">~3 hrs</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Kandy</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Visit Matale Aluvihare Temple where Buddhist doctrines were first written on Ola leaves in the 1st century.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Explore a Spice Garden at Matale before continuing to Kandy.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Visit the Temple of the Tooth Relic UNESCO World Heritage site, and see famous Blue &amp; Star sapphires being cut and polished.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>End the day enjoying a traditional culture show in Kandy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <script
-      defer=""
-      src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
-      integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
-      data-cf-beacon='{"version":"2024.11.0","token":"4174d432d8bc47e58f6ef36aa0c17dd5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <!-- Day 5 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto">
+          <img src="../assests/images/packages/5-6/b.jpg" alt="Kandy City" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">5</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 5</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Kandy City Tour</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Kandy city tour</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">Local</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Kandy</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Visit Peradeniya Botanical Garden — over 4,000 species of plants including orchids, spices, medicinal plants and towering palm trees.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Tour around Kandy: beautiful lake, colourful streets, colonial architecture, museums, arts &amp; crafts workshop, oriental market and a bazaar.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto md:order-last">
+          <img src="../assests/images/packages/5-6/c.jpg" alt="Nuwara Eliya" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">6</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 6</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Kandy → Nuwara Eliya</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Kandy → Nuwara Eliya</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">~2 hrs</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Nuwara Eliya</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Head to Nuwara Eliya — the 'little England' with Victorian-era structures, tea plantations, waterfalls and mountain ranges.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Visit a Tea Factory to see how world-renowned Ceylon tea is produced from leaf to cup.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Evening stroll through the Local Market and a walk along scenic Gregory Lake.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto">
+          <img src="../assests/images/packages/5-6/n.jpg" alt="Horton Plains" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">7</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 7</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Horton Plains / World's End</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Horton Plains National Park</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">~1 hr</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Nuwara Eliya</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Depart early to Horton Plains — a stunning highland plateau at 2,100–2,300m altitude, rich in endemic biodiversity.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Main attraction: World's End — a breathtaking cliff that drops 880 metres to the valley below.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>On a clear morning, views extend over miniature tea plantation villages all the way to the south coast.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 8 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto md:order-last">
+          <img src="../assests/images/packages/5-6/o.jpg" alt="Ella & Yala" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">8</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 8</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Ella → Kataragama → Yala</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Ella → Kataragama → Yala</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">~3 hrs</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Tissa/Yala</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Scenic drive through Ella — visit Ella Gap &amp; Rawana Falls along the way.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Visit Kataragama Hindu Kovil — an ancient pilgrimage site revered by Buddhists, Hindus, Muslims and Christians alike.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Arrive at Yala and prepare for an evening jeep safari through the tropical forest bordering the sea.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 9 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto">
+          <img src="../assests/images/packages/5-6/g.jpg" alt="Yala National Park" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">9</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 9</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Yala National Park Safari</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Yala National Park</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">Local</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in Tissa/Yala</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Early morning jeep safari at Yala National Park — Sri Lanka's most visited wildlife reserve.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Spot the elusive Sri Lankan Leopard, Asian Elephant, and many other mammals and birds in their natural habitat.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 10 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto md:order-last">
+          <img src="../assests/images/packages/5-6/d.jpg" alt="Galle" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">10</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 10</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Yala → Hambantota → Galle</h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body">
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Route</p>
+              <p class="text-gray-700">Yala → Hambantota → Galle</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Drive</p>
+              <p class="text-gray-700">~2 hrs</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-4">
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-1">Hotel</p>
+              <p class="text-gray-700">Hotel in South Coast Beach</p>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Visit the famous stilt fishermen, Salt Refinery and Fishing Harbour in Hambantota on the way to Galle.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Galle city tour: UNESCO World Heritage Site — the iconic Dutch Fort, Galle Lighthouse and tiny historical back streets.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Browse quirky boutiques and stop at a local café for lunch. Visit Galle National Museum.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 11 -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden reveal">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="day-img h-56 md:h-auto">
+          <img src="../assests/images/packages/5-6/f.jpg" alt="Colombo" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-2 p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-display text-xl font-bold flex-shrink-0">11</div>
+            <div>
+              <p class="text-xs text-blue-600 font-body font-semibold uppercase tracking-widest">Day 11</p>
+              <h3 class="font-display text-2xl font-bold text-gray-900">Colombo – Departure</h3>
+            </div>
+          </div>
+          <p class="text-sm font-body text-gray-500 mb-4">Your final day in Sri Lanka — a city send-off before your flight home.</p>
+          <ul class="space-y-1.5 text-sm font-body text-gray-600">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>After breakfast, depart to Colombo via the coastal road.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>En-route visit Kosgoda Turtle Hatchery — Sri Lanka's pioneering sea turtle conservation project.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Colombo city tour: Fort, Galle Face Green, Pettah Dutch architecture, Independence Square, Old Parliament House and Beira Lake.</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">•</span>Last-minute shopping at House of Fashion or Odel before your onward journey.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA ═══════════════════════ -->
+<section class="py-20 bg-blue-700 text-white text-center">
+  <div class="max-w-2xl mx-auto px-4 reveal">
+    <h2 class="font-display text-4xl font-bold mb-4">Ready to explore Sri Lanka?</h2>
+    <p class="font-body text-blue-100 mb-8">Contact us to customise your 10 Nights 11 Days journey and get a personalised quote.</p>
+    <a href="../index.html#contact" class="inline-block px-10 py-4 bg-white text-blue-700 font-body font-semibold rounded-full hover:bg-blue-50 transition shadow-lg">Get in Touch</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="bg-gray-950 text-white py-16 px-6">
+  <div class="max-w-screen-xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <h3 class="font-display text-xl font-bold mb-6 text-gray-100">Quick Links</h3>
+        <ul class="space-y-2.5 text-gray-400 text-sm">
+          <li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+          <li><a href="t-1-srilanka.html" class="hover:text-white transition-colors">Visit Sri Lanka</a></li>
+          <li><a href="t-2-global.html" class="hover:text-white transition-colors">Visit Global</a></li>
+          <li><a href="t-3-sport.html" class="hover:text-white transition-colors">Sport Tours</a></li>
+          <li><a href="t-6-event.html" class="hover:text-white transition-colors">Event Media</a></li>
+          <li><a href="../index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div class="text-center">
+        <h3 class="font-display text-xl font-bold mb-6 text-gray-100">Contact Details</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">NO:282/E, UC Road, Waduramulla<br />Panadura, Sri Lanka.</p>
+        <div class="space-y-1 text-sm">
+          <a href="tel:+94702612683" class="block text-gray-400 hover:text-white transition-colors">+(94) 702 612683</a>
+          <a href="tel:+94772612683" class="block text-gray-400 hover:text-white transition-colors">+(94) 772 612683</a>
+          <a href="tel:+94382248354" class="block text-gray-400 hover:text-white transition-colors">+(94) 382 248354</a>
+        </div>
+        <div class="flex items-center justify-center gap-3 mt-6">
+          <a href="https://twitter.com/ToursZaara" target="_blank" rel="noopener" class="w-9 h-9 bg-gray-800 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/zaaratours/" target="_blank" rel="noopener" class="w-9 h-9 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCSJS1YKExBI1mL8EJu6sz2g" target="_blank" rel="noopener" class="w-9 h-9 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <img src="../assests/images/logo/Zaara Logoxwhite.png" alt="Zaara Tours International" class="max-w-xs w-full opacity-85" />
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8 text-center text-gray-500 space-y-2">
+      <p class="text-sm">Copyright 2020 © Zaara Tours International (PVT) Ltd. All Rights Reserved.</p>
+      <p class="text-xs">Concept designed and developed by <a href="https://www.arcanlabs.io/" target="_blank" rel="noopener" class="hover:text-white text-gray-400 transition-colors ml-1">arcanlabs.io</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Nav open on hover (fix transparency on white sections)
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('mouseenter', () => nav.classList.add('nav-open'));
+    item.addEventListener('mouseleave', () => nav.classList.remove('nav-open'));
+  });
+
+  // Mobile drawer
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  function openMenu() {
+    mobileMenu.classList.add('open');
+    mobileOverlay.classList.remove('hidden');
+    iconOpen.classList.add('hidden');
+    iconClose.classList.remove('hidden');
+  }
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    mobileOverlay.classList.add('hidden');
+    iconOpen.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  }
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  mobileOverlay.addEventListener('click', closeMenu);
+  document.querySelectorAll('[data-close-menu]').forEach(el => el.addEventListener('click', closeMenu));
+
+  // Accordion
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('.acc-icon');
+      const isOpen = !body.classList.contains('hidden');
+      body.classList.toggle('hidden', isOpen);
+      if (icon) icon.textContent = isOpen ? '▾' : '▴';
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
 </html>
