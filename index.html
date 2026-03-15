@@ -224,6 +224,22 @@
         opacity: 1 !important;
         pointer-events: auto !important;
       }
+
+      /* Skeleton shimmer for loading images */
+      @keyframes skeleton-shimmer {
+        0%   { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      .skeleton-img {
+        background: linear-gradient(
+          90deg,
+          #e2e8f0 25%,
+          #f8fafc 50%,
+          #e2e8f0 75%
+        );
+        background-size: 200% 100%;
+        animation: skeleton-shimmer 1.5s ease-in-out infinite;
+      }
     </style>
   </head>
 
@@ -663,7 +679,7 @@
     <!-- ================================================
      HERO
      ================================================ -->
-    <section id="hero" class="relative h-screen overflow-hidden">
+    <section id="hero" class="relative h-screen overflow-hidden bg-gray-900">
       <div
         class="hero-slide active"
         style="background-image: url('assests/images/bg1/sl.jpg')"
@@ -2359,6 +2375,21 @@
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         });
+      });
+
+      // ── Skeleton shimmer for content images ──────────
+      // Applies to lazy-loaded images that use object-cover (cards, gallery,
+      // events). Skips logos/icons which use object-contain.
+      document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        if (img.classList.contains('object-contain')) return;
+        img.classList.add('skeleton-img');
+        const done = () => img.classList.remove('skeleton-img');
+        if (img.complete && img.naturalWidth > 0) {
+          done();
+        } else {
+          img.addEventListener('load', done);
+          img.addEventListener('error', done);
+        }
       });
     </script>
   </body>
